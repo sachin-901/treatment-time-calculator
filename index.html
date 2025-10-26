@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treatment Time Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Treatment Time Calculator</h1>
+
+    <form id="calcForm">
+      <label>Total dose per fraction:</label>
+      <input type="number" step="any" id="Dose" required />
+
+      <label>Field weight:</label>
+      <input type="number" step="any" id="field_weight" required />
+
+      <label>Total weight:</label>
+      <input type="number" step="any" id="total_weight" required />
+
+      <label>X field size (cm):</label>
+      <input type="number" step="any" id="X" required />
+
+      <label>Y field size (cm):</label>
+      <input type="number" step="any" id="Y" required />
+
+      <label>Wedge factor:</label>
+      <input type="number" step="any" id="wedge" required />
+
+      <label>Tray factor:</label>
+      <input type="number" step="any" id="tray" required />
+
+      <label>Baseplate factor:</label>
+      <input type="number" step="any" id="Baseplate" required />
+
+      <label>PDD or TAR (as decimal e.g., 0.68):</label>
+      <input type="number" step="any" id="pdd" required />
+
+      <label>Output factor:</label>
+      <input type="number" step="any" id="Output" required />
+
+      <button type="submit">Calculate Treatment Time</button>
+    </form>
+
+    <div class="result">
+      <h2>Results</h2>
+      <p id="efs"></p>
+      <p id="approx_field"></p>
+      <p id="treatment_time"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
